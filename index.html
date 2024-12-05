@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docinho</title>
+</head>
+<style>
+    body {
+        margin: 0;   
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(https://66.media.tumblr.com/c6a9664c01b9f21b942fa19a804fab4b/tumblr_o94ghtycj51qmzdaeo2_1280.jpg);
+    }
+
+    .hearth {
+        height: 150px;
+        width: 150px;
+        background-color: #944444;
+        position: relative;
+        transform: rotate(45deg);
+        box-shadow: -20px 20px 150px #944444;
+        animation: palpitar 0.5s linear infinite alternate;
+    }
+    .contenido {
+        position: fixed;
+        margin-bottom: 50px;
+        text-align: center;
+        animation: letras 0.5s linear infinite alternate;
+    }
+
+    h1 {
+        color: #f5a1a1;}
+    h2 {
+        color: #f5a1a1;
+    }
+@keyframes letras {
+    0%{transform: scale(1.10);}
+    80%{transform: scale(1.0);}
+    100%{transform: scale(0.8);}
+}
+@keyframes palpitar {
+    0%{transform: rotate(45deg) scale(1.10);}
+    80%{transform: rotate(45deg) scale(1.0);}
+    100%{transform: rotate(45deg) scale(0.8);}
+}
+
+    .hearth::before {
+        content: "";
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        background-color: #944444;
+        right: 50%;
+        border-radius: 50%;
+        box-shadow: 20px 20px 150px #944444;
+
+    }
+
+    .hearth::after {
+        content: "";
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        background-color: #944444;
+        top: -50%;
+        border-radius: 50%;
+        box-shadow: 20px 20px 150px #944444;
+        
+    }
+</style>
+<body>
+    <div class="hearth"></div>
+    <div class="contenido"><h1> mi corazón </h1><h2>te pertenece</h2></div>
+</body>
+</html>
